@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+// Fonts
+.manrope {
+    font-family: "Manrope", sans-serif;
+}
+
+
+.geist-mono {
+  font-family: "Geist Mono", monospace;
+}
+
+
+// Tailwind Theme
+@theme {  
+    --animate-blink: blink 1s steps(1, end) infinite; 
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
