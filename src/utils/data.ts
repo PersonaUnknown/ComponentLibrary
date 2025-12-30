@@ -194,3 +194,54 @@ export const ExplosiveTextProps: PropTableRow[] = [
         description: "If the user wants to create their own manual explosion"
     },
 ];
+
+export const TextPathProps: PropTableRow[] = [
+    {
+        prop: "children",
+        type: "string",
+        default: "-",
+        description: "Input text"
+    },
+    {
+        prop: "path",
+        type: "string",
+        default: "-",
+        description: "SVG Path definition"
+    },
+    {
+        prop: "className",
+        type: "string",
+        default: "-",
+        description: "Optional styling"
+    },
+    {
+        prop: "fill",
+        type: "string",
+        default: "none",
+        description: "Custom <path> fill"
+    },
+    {
+        prop: "startOffset",
+        type: "string",
+        default: "0%",
+        description: "Starting offset of <textPath>"
+    },
+    {
+        prop: "strokeColor",
+        type: "string",
+        default: "-",
+        description: "Custom Path Color"
+    },
+    {
+        prop: "strokeWidth",
+        type: "number",
+        default: "1",
+        description: "Custom Path stroke width"
+    },
+    {
+        prop: "viewBox",
+        type: "string",
+        default: "-",
+        description: "Custom SVG Viewbox"
+    }
+];

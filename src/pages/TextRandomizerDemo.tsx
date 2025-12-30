@@ -1,8 +1,7 @@
 import BackButton from "../components/buttons/BackButton";
 import PropTable from "../components/tables/PropTable";
-import ExplosiveText from "../components/text/ExplosiveText";
 import TextRandomizer from "../components/text/TextRandomizer";
-import { ExplosiveTextProps, ManualExplosion, TextRandomizerProps } from "../utils/data";
+import { TextRandomizerProps } from "../utils/data";
 
 /**
  * Text Randomizer Demo Showcase
