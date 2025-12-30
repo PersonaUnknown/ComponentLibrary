@@ -5,6 +5,8 @@ import {
 } from "react-router-dom";
 import './App.css';
 import HomePage from './pages/HomePage';
+import ExplosiveTextDemo from "./pages/ExplosiveTextDemo";
+import TextRandomizerDemo from "./pages/TextRandomizerDemo";
 import TypewriterDemo from "./pages/TypewriterDemo";
 
 const App = () => {
@@ -13,6 +15,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/typewriter" element={<TypewriterDemo />} />
+        <Route path="/text-random" element={<TextRandomizerDemo />} />
+        <Route path="/text-explode" element={<ExplosiveTextDemo />} />
       </Routes>
     </Router>
   );

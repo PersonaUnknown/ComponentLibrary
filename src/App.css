@@ -4,13 +4,22 @@
 .manrope {
     font-family: "Manrope", sans-serif;
 }
-
-
+.space-mono {
+    font-family: "Space Mono", monospace;
+}
 .geist-mono {
   font-family: "Geist Mono", monospace;
 }
 
-
+// Clip Paths
+@layer utilities {
+    .clip-bottom-right-tri {
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 100%, 0 100%);
+    }
+}
+.clip-bottom-right-tri {
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 100%, 0 100%) !important;
+}
 // Tailwind Theme
 @theme {  
     --animate-blink: blink 1s steps(1, end) infinite; 

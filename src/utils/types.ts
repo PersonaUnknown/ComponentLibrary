@@ -1,4 +1,13 @@
 /**
+ * Types defined for Transformations (used in animations)
+ */
+export interface Transform {
+    rotation: number;
+    translateX: number;
+    translateY: number;
+}
+
+/**
  * Types defined for Component Cards
  */
 export interface ComponentSection {
