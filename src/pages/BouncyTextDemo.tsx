@@ -1,57 +1,70 @@
 import BackButton from "../components/buttons/BackButton";
 import PropTable from "../components/tables/PropTable";
-import ExplosiveText from "../components/text/ExplosiveText";
-import { ExplosiveTextProps, ManualExplosion } from "../utils/data";
+import BouncyText from "../components/text/BouncyText";
+import { BouncyTextProps } from "../utils/data";
 
 /**
  * Explosive Text Demo Showcase
  */
-const ExplosiveTextDemo = () => {
+const BouncyTextDemo = () => {
     return (
         <div>
             <div className="min-h-screen p-4 md:p-6 manrope">
                 <BackButton />
                 <h1 className="text-center text-2xl sm:text-3xl font-bold">
-                    Scatter / Explosive Text
+                    Bouncy Text
                 </h1>
                 <h2 className="text-center text-sm sm:text-base">
-                    When hovering over text, scatter or "explode" the text in various rotations and translations.
+                    Text that has its characters bounce / move in interesting patterns 
                 </h2>
                 <div className="h-2 md:h-4" />
                 <main className="flex justify-center">
                     <div className="w-full md:w-3xl lg:w-5xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
-                       
                         <DemoCard 
-                            header="Base Usage"
+                            header="Y Position"
                             child={
-                                <ExplosiveText>
+                                <BouncyText>
                                     HELLO WORLD
-                                </ExplosiveText>
+                                </BouncyText>
                             }
                         />
                         <DemoCard 
-                            header="Always Random"
+                            header="Scale Animation"
                             child={
-                                <ExplosiveText alwaysRandom>
+                                <BouncyText animType="scale">
                                     HELLO WORLD
-                                </ExplosiveText>
+                                </BouncyText>
                             }
                         />
                         <DemoCard 
-                            header="Not Random"
+                            header="Move + Scale Animation"
                             child={
-                                <ExplosiveText
-                                    transforms={ManualExplosion}
-                                >
-                                    HIWORLD
-                                </ExplosiveText>
+                                <BouncyText animType="move-scale">
+                                    HELLO WORLD
+                                </BouncyText>
+                            }
+                        />
+                        <DemoCard 
+                            header="Custom Anim Speed"
+                            child={
+                                <BouncyText delay={0.05}>
+                                    HELLO WORLD
+                                </BouncyText>
+                            }
+                        />
+                        <DemoCard 
+                            header="Custom Styling"
+                            child={
+                                <BouncyText className="bg-black text-white p-2">
+                                    HELLO WORLD
+                                </BouncyText>
                             }
                         />
                     </div>
                 </main>
                 <div className="h-2 md:h-4" />
                 <div className="flex justify-center">
-                    <PropTable rows={ExplosiveTextProps} />
+                    <PropTable rows={BouncyTextProps} />
                 </div>
             </div>
         </div>
@@ -78,4 +91,4 @@ const DemoCard = ({
     );
 }
 
-export default ExplosiveTextDemo;
+export default BouncyTextDemo;

@@ -27,6 +27,11 @@ export const ComponentList: ComponentSection[] = [
                 label: "Text Along Path",
                 description: "Have characters be able to follow along a non-linear path."
             },
+            {
+                href: "text-bounce",
+                label: "Bouncy Text",
+                description: "Have characters bounce / move in interesting ways."
+            },
         ]
     },
     {
@@ -193,6 +198,33 @@ export const ExplosiveTextProps: PropTableRow[] = [
         default: "-",
         description: "If the user wants to create their own manual explosion"
     },
+];
+
+export const BouncyTextProps: PropTableRow[] = [
+    {
+        prop: "children",
+        type: "string",
+        default: "-",
+        description: "Input text"
+    },
+    {
+        prop: "className",
+        type: "string",
+        default: "-",
+        description: "Optional styling"
+    },
+    {
+        prop: "animType",
+        type: "\"y\" | \"scale\" | \"move-scale\"",
+        default: "\"y\"",
+        description: "Type of animation to play"
+    },
+    {
+        prop: "delay",
+        type: "number",
+        default: "0.2",
+        description: "Delay between animating characters"
+    }
 ];
 
 export const TextPathProps: PropTableRow[] = [

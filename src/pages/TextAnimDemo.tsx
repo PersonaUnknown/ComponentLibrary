@@ -98,9 +98,6 @@ const TextAnimDemo = () => {
     );
 }
 
-/**
- * Component for grouping Typewriter component configuration w/ appropriate refresh button
- */
 interface Props {
     header: string;
     child: React.ReactNode;
