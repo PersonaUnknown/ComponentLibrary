@@ -30,3 +30,13 @@ export interface PropTableRow {
     default: string;
     description: string;
 }
+
+/**
+ * Types defined for Ripple Button component 
+ */
+export interface RippleButtonTransform {
+    x: number; 
+    y: number; 
+    size: number; 
+    key: number;
+}

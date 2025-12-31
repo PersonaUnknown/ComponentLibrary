@@ -37,7 +37,26 @@ export const ComponentList: ComponentSection[] = [
     {
         header: "Input",
         components: [
-
+            {
+                href: "ripple-button",
+                label: "Ripple Button",
+                description: "Button that creates a ripple effect when you press it."
+            },
+            {
+                href: "interactive-hover-button",
+                label: "Interactive Hover Button",
+                description: "Button with on-hover effect that results in a dynamic transition / feedback for user."
+            }
+        ]
+    },
+    {
+        header: "Container",
+        components: [
+            {
+                href: "marquee",
+                label: "Marquee",
+                description: "Infinitely scrolling container that displays any form of content (i.e. text, images, videos, etc.)."
+            },
         ]
     }
 ];
@@ -141,6 +160,42 @@ export const TypewriterProps: PropTableRow[] = [
         default: "\"line\"",
         description: "Style cursor as | or _"
     }
+];
+
+/**
+ * Component Props (for Input)
+ */
+export const RippleButtonProps: PropTableRow[] = [
+    {
+        prop: "children",
+        type: "string",
+        default: "-",
+        description: "Button Text"
+    },
+    {
+        prop: "className",
+        type: "string",
+        default: "-",
+        description: "Optional Tailwind classes / styling"
+    },
+    {
+        prop: "onClick",
+        type: "() => void",
+        default: "-",
+        description: "Button logic"
+    },
+    {
+        prop: "rippleColor",
+        type: "string",
+        default: "#ff0000",
+        description: "Color of ripple"
+    },
+    {
+        prop: "duration",
+        type: "number",
+        default: "500",
+        description: "Ripple animation duration / lifetime (ms)"
+    },
 ];
 
 /**
@@ -275,5 +330,29 @@ export const TextPathProps: PropTableRow[] = [
         type: "string",
         default: "-",
         description: "Custom SVG Viewbox"
+    }
+];
+
+/**
+ * Basic Button Props
+ */
+export const ButtonProps: PropTableRow[] = [
+    {
+        prop: "children",
+        type: "string",
+        default: "-",
+        description: "Button Text"
+    },
+    {
+        prop: "className",
+        type: "string",
+        default: "-",
+        description: "Optional Styling"
+    },
+    {
+        prop: "onClick",
+        type: "() => void",
+        default: "-",
+        description: "Button Logic"
     }
 ];
