@@ -1,11 +1,10 @@
 import BackButton from "../../components/buttons/BackButton";
-import InteractiveHoverButton from "../../components/buttons/InteractiveHoverButton";
+import DemoCard from "../../components/cards/DemoCard";
 import Accordion from "../../components/containers/Accordion";
 import PropTable from "../../components/tables/PropTable";
 import { AccordionProps } from "../../utils/data";
 
 const AccordionDemo = () => {
-    const demoFunction = () => {};
     return (
         <div>
             <div className="min-h-screen p-4 md:p-6 manrope">
@@ -44,26 +43,6 @@ const AccordionDemo = () => {
                 <div className="flex justify-center">
                     <PropTable rows={AccordionProps} />
                 </div>
-            </div>
-        </div>
-    );
-}
-
-interface Props {
-    header: string;
-    child: React.ReactNode;
-}
-const DemoCard = ({
-    header,
-    child
-}: Props) => {
-    return (
-        <div className="h-full">
-            <h2 className="text-base lg:text-lg font-semibold">
-                {header}
-            </h2>
-            <div className="relative flex justify-center item-center border-2 border-[#e6e6e6] rounded-xl px-3 py-5 md:p-6">
-                {child}
             </div>
         </div>
     );

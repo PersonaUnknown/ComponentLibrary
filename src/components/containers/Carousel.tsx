@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge";
 import type { CarouselRef } from "../../utils/refs";
 
 interface Props {
-    children: React.ReactNode[];
+    children: React.ReactNode | React.ReactNode[];
     className?: string;
 }
 
@@ -19,7 +19,7 @@ const Carousel = forwardRef(({
 ) => {
     const [featureIndex, setFeatureIndex] = useState<number>(0);
     const carouselRef = useRef<HTMLDivElement>(null);
-    const featureLength = children.length;
+    const featureLength = Array.isArray(children) ? children.length : 1;   
     // Desktop / Mouse Scrolling Controls
     const [isScrolling, setIsScrolling] = useState<boolean>(false);
     const mouseCoords = useRef({
@@ -168,14 +168,18 @@ const Carousel = forwardRef(({
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
         >
-            {children.map((child, index) => {
-                const key = `child-${index}`;
-                return (
-                    <Fragment key={key}>
-                        {child}
-                    </Fragment>
-                );
-            })}
+            {
+                Array.isArray(children) ?
+                children.map((child, index) => {
+                    const key = `child-${index}`;
+                    return (
+                        <Fragment key={key}>
+                            {child}
+                        </Fragment>
+                    );
+                }) :
+                children
+            }
         </div>
     );
 });

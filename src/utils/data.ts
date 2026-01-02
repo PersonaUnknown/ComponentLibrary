@@ -42,6 +42,11 @@ export const ComponentList: ComponentSection[] = [
                 label: "Text Highlight",
                 description: "Text that gets highlighted when you hover it."
             },
+            {
+                href: "text-tooltip",
+                label: "Tooltip (WIP)",
+                description: "Tooltip information that displays when hovering over text."
+            },
         ]
     },
     {
@@ -64,7 +69,7 @@ export const ComponentList: ComponentSection[] = [
         components: [
             {
                 href: "marquee",
-                label: "Marquee (WIP)",
+                label: "Marquee (In Progress)",
                 description: "Infinitely scrolling container that displays any form of content (i.e. text, images, videos, etc.)."
             },
             {
@@ -79,13 +84,18 @@ export const ComponentList: ComponentSection[] = [
             },
             {
                 href: "condensed-container",
-                label: "Condensed Container (WIP)",
+                label: "Condensed Container (In Progress)",
                 description: "Container that condenses equally sized content on top of each other. Hovering expands the list, revealing all content."
             },
             {
                 href: "accordion",
                 label: "Accordion",
                 description: "Foldable Container that can be opened and closed through clicking on it."
+            },
+            {
+                href: "modal",
+                label: "Modal (WIP)",
+                description: "Modal popup that displays over main content of page."
             },
         ]
     },
@@ -94,8 +104,13 @@ export const ComponentList: ComponentSection[] = [
         components: [
             {
                 href: "file-tree",
-                label: "File Tree (WIP)",
+                label: "File Tree",
                 description: "Displays folder and file structure of a directory."
+            },
+            {
+                href: "video-player",
+                label: "Custom Video Player (WIP)",
+                description: "Video player that does not use default controls UI."
             },
         ]
     }
@@ -425,6 +440,58 @@ export const TextHighlightProps: PropTableRow[] = [
         description: "How long it takes to fully highlight text (ms)"
     },
 ];
+export const FolderProps: PropTableRow[] = [
+    {
+        prop: "value",
+        type: "string",
+        default: "-",
+        description: "Folder / Directory name"
+    },
+    {
+        prop: "children",
+        type: "ReactNode | ReactNode[]",
+        default: "-",
+        description: "Input elements to put inside Folder"
+    },
+    {
+        prop: "className",
+        type: "string",
+        default: "-",
+        description: "Optional Styling"
+    },
+    {
+        prop: "closedIcon",
+        type: "ReactNode",
+        default: "-",
+        description: "Optional Component to render instead of default closed folder icon"
+    },
+    {
+        prop: "openIcon",
+        type: "ReactNode",
+        default: "-",
+        description: "Optional Component to render instead of default open folder icon"
+    },
+];
+export const FileProps: PropTableRow[] = [
+    {
+        prop: "children",
+        type: "string",
+        default: "-",
+        description: "File name"
+    },
+    {
+        prop: "className",
+        type: "string",
+        default: "-",
+        description: "Optional Styling"
+    },
+    {
+        prop: "fileIcon",
+        type: "ReactNode",
+        default: "-",
+        description: "Optional Component to render instead of default file icon"
+    },
+];
 /**
  * Basic Component Props
  */
@@ -465,7 +532,7 @@ export const BasicProps: PropTableRow[] = [
 export const BasicContainerProps: PropTableRow[] = [
     {
         prop: "children",
-        type: "ReactNode[]",
+        type: "ReactNode | ReactNode[]",
         default: "-",
         description: "Input elements to put inside container"
     },

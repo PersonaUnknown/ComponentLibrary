@@ -13,6 +13,7 @@ import TextRotateDemo from "./pages/text/TextRotateDemo";
 import TypewriterDemo from "./pages/TypewriterDemo";
 import AccordionDemo from "./pages/container/AccordionDemo";
 import CarouselDemo from "./pages/container/CarouselDemo";
+import FileTreeDemo from "./pages/container/FileTreeDemo";
 import InteractiveHoverDemo from "./pages/input/InteractiveHoverDemo";
 import RippleButtonDemo from "./pages/input/RippleButtonDemo";
 import TextHighlightDemo from "./pages/text/TextHighlightDemo";
@@ -36,6 +37,7 @@ const App = () => {
         {/* Container */}
         <Route path="/accordion" element={<AccordionDemo />} />
         <Route path="/carousel" element={<CarouselDemo />} />
+        <Route path="/file-tree" element={<FileTreeDemo />} />
       </Routes>
     </Router>
   );
