@@ -14,3 +14,8 @@ export type CarouselRef = {
 	scrollLeft: () => void;
 	scrollRight: () => void;
 };
+
+export interface ModalRef {
+	onShow: () => void;
+	onHide: () => void;
+}

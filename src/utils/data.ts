@@ -104,7 +104,7 @@ export const ComponentList: ComponentSection[] = [
 			},
 			{
 				href: "modal",
-				label: "Modal (WIP)",
+				label: "Modal",
 				description: "Modal popup that displays over main content of page.",
 			},
 		],
@@ -504,6 +504,38 @@ export const FileProps: PropTableRow[] = [
 		type: "ReactNode",
 		default: "-",
 		description: "Optional Component to render instead of default file icon",
+	},
+];
+export const ModalProps: PropTableRow[] = [
+	{
+		prop: "buttonContent",
+		type: "ReactNode",
+		default: "-",
+		description: "Component that acts as a button to show modal",
+	},
+	{
+		prop: "content",
+		type: "ReactNode",
+		default: "-",
+		description: "Component that gets displayed as the modal",
+	},
+	{
+		prop: "position",
+		type: "\"top-left\" | \"top-center\" | \"top-right\" | \"center-left\" | \"center\" | \"center-right\" | \"bottom-left\" | \"bottom-center\" | \"bottom-right\"",
+		default: "",
+		description: "Where to align the content based on anchor point positioning",
+	},
+	{
+		prop: "backdrop",
+		type: "boolean",
+		default: "true",
+		description: "Have dark backdrop cover the screen behind modal",
+	},
+	{
+		prop: "staticModal",
+		type: "boolean",
+		default: "false",
+		description: "Whether to close the modal if you click outside of the modal",
 	},
 ];
 /**

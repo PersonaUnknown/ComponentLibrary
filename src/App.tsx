@@ -4,6 +4,7 @@ import BouncyTextDemo from "./pages/BouncyTextDemo";
 import AccordionDemo from "./pages/container/AccordionDemo";
 import CarouselDemo from "./pages/container/CarouselDemo";
 import FileTreeDemo from "./pages/container/FileTreeDemo";
+import ModalDemo from "./pages/container/ModalDemo";
 import ExplosiveTextDemo from "./pages/ExplosiveTextDemo";
 import HomePage from "./pages/HomePage";
 import InteractiveHoverDemo from "./pages/input/InteractiveHoverDemo";
@@ -39,6 +40,7 @@ const App = () => {
 				<Route path="/accordion" element={<AccordionDemo />} />
 				<Route path="/carousel" element={<CarouselDemo />} />
 				<Route path="/file-tree" element={<FileTreeDemo />} />
+				<Route path="/modal" element={<ModalDemo />} />
 			</Routes>
 		</Router>
 	);
