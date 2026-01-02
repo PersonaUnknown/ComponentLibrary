@@ -1,3 +1,4 @@
+import ScrollToTop from "../components/buttons/ScrollToTop";
 import ComponentCard from "../components/cards/ComponentCard";
 import { ComponentList } from "../utils/data";
 
@@ -28,6 +29,9 @@ const HomePage = () => {
 					</section>
 				);
 			})}
+			<div className="flex justify-center py-2">	
+				<ScrollToTop />
+			</div>
 		</div>
 	);
 };
