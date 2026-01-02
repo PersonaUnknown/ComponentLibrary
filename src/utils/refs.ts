@@ -1,16 +1,16 @@
 export type TypewriterRef = {
-    typeForward: () => void;
-    startTyping: () => void;
-}
+	typeForward: () => void;
+	startTyping: () => void;
+};
 
 export type TextAlongPathRef = {
-    play: () => void;
-    rewind: () => void;
-    pause: () => void;
-    reset: () => void;
-}
+	play: () => void;
+	rewind: () => void;
+	pause: () => void;
+	reset: () => void;
+};
 
 export type CarouselRef = {
-    scrollLeft: () => void;
-    scrollRight: () => void;
-}
+	scrollLeft: () => void;
+	scrollRight: () => void;
+};

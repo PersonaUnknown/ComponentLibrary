@@ -2,21 +2,20 @@ import BackButton from "../../components/buttons/BackButton";
 import DemoCard from "../../components/cards/DemoCard";
 import PropTable from "../../components/tables/PropTable";
 import TextRotate from "../../components/text/TextRotate";
+// import Tooltip from "../../components/text/Tooltip";
 import { TextRotateProps } from "../../utils/data";
 
 /**
- * Demo Showcase of creating Text Rotate component
+ * Demo Showcase of Tooltip Component
  */
-const TextRotateDemo = () => {
+const TooltipDemo = () => {
 	return (
 		<div>
 			<div className="min-h-screen p-4 md:p-6 manrope">
 				<BackButton />
-				<h1 className="text-center text-2xl sm:text-3xl font-bold">
-					Text Rotate
-				</h1>
+				<h1 className="text-center text-2xl sm:text-3xl font-bold">Tooltip</h1>
 				<h2 className="text-center text-sm sm:text-base">
-					Component that rotates through multiple words one at a time.
+					Component that displays content when hovering over the main component
 				</h2>
 				<div className="h-2 md:h-4" />
 				<main className="flex justify-center">
@@ -51,4 +50,4 @@ const TextRotateDemo = () => {
 	);
 };
 
-export default TextRotateDemo;
+export default TooltipDemo;

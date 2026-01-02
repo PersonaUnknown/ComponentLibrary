@@ -1,46 +1,46 @@
 @import "tailwindcss";
-@plugin 'tailwind-scrollbar';
+@plugin "tailwind-scrollbar";
 
-// Fonts
+/* Fonts */
 .manrope {
-    font-family: "Manrope", sans-serif;
+	font-family: "Manrope", sans-serif;
 }
 .space-mono {
-    font-family: "Space Mono", monospace;
+	font-family: "Space Mono", monospace;
 }
 .geist-mono {
-  font-family: "Geist Mono", monospace;
+	font-family: "Geist Mono", monospace;
 }
-// Clip Paths
+/* Clip Paths */
 @layer utilities {
-    .clip-bottom-right-tri {
-        clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 100%, 0 100%);
-    }
+	.clip-bottom-right-tri {
+		clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 100%, 0 100%);
+	}
 }
 .clip-bottom-right-tri {
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 100%, 0 100%) !important;
+	clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 100%, 0 100%);
 }
-// Tailwind Theme
-@theme {  
-    --animate-blink: blink 1s steps(1, end) infinite; 
-    @keyframes blink {
-        0% {
-            opacity: 1;
-        }
-        50% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
+/* Tailwind Animations / Theme */
+@theme {
+	--animate-blink: blink 1s steps(1, end) infinite;
+	@keyframes blink {
+		0% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
