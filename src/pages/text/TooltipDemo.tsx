@@ -1,14 +1,20 @@
 import BackButton from "../../components/buttons/BackButton";
 import DemoCard from "../../components/cards/DemoCard";
 import PropTable from "../../components/tables/PropTable";
-import TextRotate from "../../components/text/TextRotate";
-// import Tooltip from "../../components/text/Tooltip";
-import { TextRotateProps } from "../../utils/data";
+import Tooltip from "../../components/text/Tooltip";
+import { TooltipProps } from "../../utils/data";
 
 /**
- * Demo Showcase of Tooltip Component
+ * Demo Showcase of Tooltip Component using placeholder content
  */
 const TooltipDemo = () => {
+	const PlaceholderContent = () => {
+		return (
+			<div className="bg-black p-4 text-xl rounded-lg text-white">
+				Hello World
+			</div>
+		);
+	};
 	return (
 		<div>
 			<div className="min-h-screen p-4 md:p-6 manrope">
@@ -21,21 +27,71 @@ const TooltipDemo = () => {
 				<main className="flex justify-center">
 					<div className="w-full md:w-3xl lg:w-5xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
 						<DemoCard
-							header="Base Usage"
-							child={<TextRotate words={["Hello", "World", ":)"]} />}
+							header="Top"
+							child={
+								<Tooltip 
+									trigger={
+										<div className="mx-auto bg-[#505081] text-white text-base md:text-xl cursor-pointer p-2 rounded-xl text-center">
+											Hover Over Me
+										</div>
+									}
+									content={<PlaceholderContent />}
+								/>
+							}
+						/>
+						<DemoCard
+							header="Left"
+							child={
+								<Tooltip 
+									trigger={
+										<div className="mx-auto bg-[#505081] text-white text-base md:text-xl cursor-pointer p-2 rounded-xl text-center">
+											Hover Over Me
+										</div>
+									}
+									content={<PlaceholderContent />}
+									position="left"
+								/>
+							}
+						/>
+						<DemoCard
+							header="Right"
+							child={
+								<Tooltip 
+									trigger={
+										<div className="mx-auto bg-[#505081] text-white text-base md:text-xl cursor-pointer p-2 rounded-xl text-center">
+											Hover Over Me
+										</div>
+									}
+									content={<PlaceholderContent />}
+									position="right"
+								/>
+							}
+						/>
+						<DemoCard
+							header="Bottom"
+							child={
+								<Tooltip 
+									trigger={
+										<div className="mx-auto bg-[#505081] text-white text-base md:text-xl cursor-pointer p-2 rounded-xl text-center">
+											Hover Over Me
+										</div>
+									}
+									content={<PlaceholderContent />}
+									position="bottom"
+								/>
+							}
 						/>
 						<DemoCard
 							header="Custom Duration"
 							child={
-								<TextRotate words={["Hello", "World", ":)"]} duration={1500} />
-							}
-						/>
-						<DemoCard
-							header="Custom Styling"
-							child={
-								<TextRotate
-									words={["Hello", "World", ":)"]}
-									className="space-mono text-xl font-bold"
+								<Tooltip 
+									trigger={
+										<div className="mx-auto bg-[#505081] text-white text-base md:text-xl cursor-pointer p-2 rounded-xl text-center">
+											Hover Over Me
+										</div>
+									}
+									content={<PlaceholderContent />}
+									delay={50}
 								/>
 							}
 						/>
@@ -43,7 +99,7 @@ const TooltipDemo = () => {
 				</main>
 				<div className="h-2 md:h-4" />
 				<div className="flex justify-center">
-					<PropTable rows={TextRotateProps} />
+					<PropTable rows={TooltipProps} />
 				</div>
 			</div>
 		</div>

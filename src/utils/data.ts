@@ -133,6 +133,11 @@ export const ComponentList: ComponentSection[] = [
 				label: "Custom Video Player (WIP)",
 				description: "Video player that does not use default controls UI.",
 			},
+			{
+				href: "crossword",
+				label: "Crossword Puzzle (WIP)",
+				description: "Crossword Puzzle grid with interactable cells",
+			},
 		],
 	},
 ];
@@ -629,7 +634,6 @@ export const DualSliderProps: PropTableRow[] = [
 		description: "How you want the labels to be formatted ($, %, etc.)",
 	},
 ];
-
 export const DrawerProps: PropTableRow[] = [
 	{
 		prop: "side",
@@ -654,6 +658,44 @@ export const DrawerProps: PropTableRow[] = [
 		type: "boolean",
 		default: "false",
 		description: "Whether clicking outside of the drawer will close it",
+	},
+];
+export const TooltipProps: PropTableRow[] = [
+	{
+		prop: "trigger",
+		type: "ReactNode",
+		default: "-",
+		description: "What is going to spawn the tooltip",
+	},
+	{
+		prop: "content",
+		type: "ReactNode",
+		default: "-",
+		description: "What is going to be displayed on the popup",
+	},
+	{
+		prop: "position",
+		type: "Position",
+		default: "top",
+		description: "Where to position the tooltip relative to the trigger",
+	},
+	{
+		prop: "className",
+		type: "string",
+		default: "-",
+		description: "Custom styling",
+	},
+	{
+		prop: "contentClassName",
+		type: "string",
+		default: "-",
+		description: "Custom content styling",
+	},
+	{
+		prop: "delay",
+		type: "number",
+		default: "200",
+		description: "Delay before displaying and hiding tooltip (ms)",
 	},
 ];
 /**

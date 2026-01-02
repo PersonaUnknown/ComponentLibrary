@@ -1,15 +1,33 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { twMerge } from "tailwind-merge";
+import type { Position } from "../../utils/types";
 
+interface PopupPosition {
+	top: number;
+	left: number;
+}
+
+interface Props {
+	trigger: React.ReactNode; // What is going to spawn the Popup
+	content: React.ReactNode; // What is going to be displayed on the Popup
+	position?: Position; //
+	className?: string; // Tailwind Styling
+	contentClassName?: string; // Tailwind Styling
+	delay?: number; // How long to wait before displaying Popup
+}
+
+/**
+ * Tooltip popup that shows when hovered on component 
+ */
 const Tooltip = ({
 	trigger,
 	content,
 	position = "top",
-	className,
-	contentClassName,
+	className="",
+	contentClassName="",
 	delay = 200,
-}: PopupProps) => {
+}: Props) => {
 	// State
 	const [isMounted, setIsMounted] = useState<boolean>(false);
 	const [isHovering, setIsHovering] = useState<boolean>(false);
@@ -70,7 +88,7 @@ const Tooltip = ({
 		// Increased delay to allow easier movement to popup content
 		timeoutRef.current = setTimeout(() => {
 			setIsHovering(false);
-		}, 300); // Longer delay to allow moving to popup content
+		}, delay); // Longer delay to allow moving to popup content
 	};
 
 	const calculatePosition = () => {
@@ -189,21 +207,5 @@ const Tooltip = ({
 		</div>
 	);
 };
-
-type Position = "top" | "right" | "bottom" | "left";
-
-interface PopupPosition {
-	top: number;
-	left: number;
-}
-
-interface PopupProps {
-	trigger: React.ReactNode; // What is going to spawn the Popup
-	content: React.ReactNode; // What is going to be displayed on the Popup
-	position?: Position; //
-	className?: string; // Tailwind Styling
-	contentClassName?: string; // Tailwind Styling
-	delay?: number; // How long to wait before displaying Popup
-}
 
 export default Tooltip;

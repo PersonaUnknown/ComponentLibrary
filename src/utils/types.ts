@@ -6,6 +6,7 @@ export interface Transform {
 	translateX: number;
 	translateY: number;
 }
+export type Position = "top" | "right" | "bottom" | "left";
 
 /**
  * Types defined for Component Cards

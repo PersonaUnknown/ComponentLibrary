@@ -45,11 +45,10 @@ const DrawerDemo = () => {
 			<div className="min-h-screen p-4 md:p-6 manrope">
 				<BackButton />
 				<h1 className="text-center text-2xl sm:text-3xl font-bold">
-					Accordion
+					Drawer
 				</h1>
 				<h2 className="text-center text-sm sm:text-base">
-					Foldable Container that can be opened and closed through clicking on
-					it.
+					Container that slides in and out of view to display content like menus
 				</h2>
 				<div className="h-2 md:h-4" />
 				<main className="flex justify-center">

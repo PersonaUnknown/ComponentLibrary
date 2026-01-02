@@ -10,10 +10,10 @@ const InteractiveHoverDemo = () => {
 			<div className="min-h-screen p-4 md:p-6 manrope">
 				<BackButton />
 				<h1 className="text-center text-2xl sm:text-3xl font-bold">
-					Ripple Button
+					Interactive Hover Button
 				</h1>
 				<h2 className="text-center text-sm sm:text-base">
-					Button that creates a ripple effect when you press it
+					Button with an interesting on-hover animation to entice users
 				</h2>
 				<div className="h-2 md:h-4" />
 				<main className="flex justify-center">
