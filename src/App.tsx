@@ -9,6 +9,7 @@ import ExplosiveTextDemo from "./pages/ExplosiveTextDemo";
 import HomePage from './pages/HomePage';
 import TextAlongPathDemo from "./pages/TextAlongPathDemo";
 import TextRandomizerDemo from "./pages/TextRandomizerDemo";
+import TextRotateDemo from "./pages/text/TextRotateDemo";
 import TypewriterDemo from "./pages/TypewriterDemo";
 import InteractiveHoverDemo from "./pages/input/InteractiveHoverDemo";
 import RippleButtonDemo from "./pages/input/RippleButtonDemo";
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/text-explode" element={<ExplosiveTextDemo />} />
         <Route path="/text-path" element={<TextAlongPathDemo />} />
         <Route path="/text-bounce" element={<BouncyTextDemo />} />
+        <Route path="/text-rotate" element={<TextRotateDemo />} />
         {/* Input */}
         <Route path="/ripple-button" element={<RippleButtonDemo />} />
         <Route path="/interactive-hover-button" element={<InteractiveHoverDemo />} />

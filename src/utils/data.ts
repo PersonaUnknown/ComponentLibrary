@@ -32,6 +32,11 @@ export const ComponentList: ComponentSection[] = [
                 label: "Bouncy Text",
                 description: "Have characters bounce / move in interesting ways."
             },
+            {
+                href: "text-rotate",
+                label: "Word Rotate (WIP)",
+                description: "Vertically rotate between words as each word slides into frame from top to bottom."
+            },
         ]
     },
     {
@@ -54,8 +59,33 @@ export const ComponentList: ComponentSection[] = [
         components: [
             {
                 href: "marquee",
-                label: "Marquee",
+                label: "Marquee (WIP)",
                 description: "Infinitely scrolling container that displays any form of content (i.e. text, images, videos, etc.)."
+            },
+            {
+                href: "mario-container",
+                label: "Mario (WIP)",
+                description: "Container meant to resemble some of the UI from Mario games (particularly Mario Wonder)."
+            },
+            {
+                href: "carousel",
+                label: "Carousel (WIP)",
+                description: "Container that displays one element at a time. Able to traverse the container using mouse / touch controls or button input."
+            },
+            {
+                href: "condensed-container",
+                label: "Condensed Container (WIP)",
+                description: "Container that condenses equally sized content on top of each other. Hovering expands the list, revealing all content."
+            },
+        ]
+    },
+    {
+        header: "Other",
+        components: [
+            {
+                href: "file-tree",
+                label: "File Tree (WIP)",
+                description: "Displays folder and file structure of a directory."
             },
         ]
     }
@@ -161,10 +191,6 @@ export const TypewriterProps: PropTableRow[] = [
         description: "Style cursor as | or _"
     }
 ];
-
-/**
- * Component Props (for Input)
- */
 export const RippleButtonProps: PropTableRow[] = [
     {
         prop: "children",
@@ -197,10 +223,6 @@ export const RippleButtonProps: PropTableRow[] = [
         description: "Ripple animation duration / lifetime (ms)"
     },
 ];
-
-/**
- * Component Props (for text animation components)
- */
 export const TextRandomizerProps: PropTableRow[] = [
     {
         prop: "children",
@@ -227,7 +249,6 @@ export const TextRandomizerProps: PropTableRow[] = [
         description: "Amount to offset iterations to adjust how the animation is displayed"
     },
 ];
-
 export const ExplosiveTextProps: PropTableRow[] = [
     {
         prop: "children",
@@ -254,7 +275,6 @@ export const ExplosiveTextProps: PropTableRow[] = [
         description: "If the user wants to create their own manual explosion"
     },
 ];
-
 export const BouncyTextProps: PropTableRow[] = [
     {
         prop: "children",
@@ -281,7 +301,6 @@ export const BouncyTextProps: PropTableRow[] = [
         description: "Delay between animating characters"
     }
 ];
-
 export const TextPathProps: PropTableRow[] = [
     {
         prop: "children",
@@ -332,9 +351,29 @@ export const TextPathProps: PropTableRow[] = [
         description: "Custom SVG Viewbox"
     }
 ];
+export const TextRotateProps: PropTableRow[] = [
+    {
+        prop: "children",
+        type: "string",
+        default: "-",
+        description: "Button Text"
+    },
+    {
+        prop: "className",
+        type: "string",
+        default: "-",
+        description: "Optional Styling"
+    },
+    {
+        prop: "duration",
+        type: "number",
+        default: "2500",
+        description: "Animation Duration (ms)"
+    },
+];
 
 /**
- * Basic Button Props
+ * Basic Component Props
  */
 export const ButtonProps: PropTableRow[] = [
     {
@@ -355,4 +394,18 @@ export const ButtonProps: PropTableRow[] = [
         default: "-",
         description: "Button Logic"
     }
+];
+export const BasicProps: PropTableRow[] = [
+    {
+        prop: "children",
+        type: "string",
+        default: "-",
+        description: "Button Text"
+    },
+    {
+        prop: "className",
+        type: "string",
+        default: "-",
+        description: "Optional Styling"
+    },
 ];
