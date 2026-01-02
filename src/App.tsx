@@ -11,6 +11,7 @@ import TextAlongPathDemo from "./pages/TextAlongPathDemo";
 import TextRandomizerDemo from "./pages/TextRandomizerDemo";
 import TextRotateDemo from "./pages/text/TextRotateDemo";
 import TypewriterDemo from "./pages/TypewriterDemo";
+import AccordionDemo from "./pages/container/AccordionDemo";
 import InteractiveHoverDemo from "./pages/input/InteractiveHoverDemo";
 import RippleButtonDemo from "./pages/input/RippleButtonDemo";
 
@@ -29,6 +30,8 @@ const App = () => {
         {/* Input */}
         <Route path="/ripple-button" element={<RippleButtonDemo />} />
         <Route path="/interactive-hover-button" element={<InteractiveHoverDemo />} />
+        {/* Container */}
+        <Route path="/accordion" element={<AccordionDemo />} />
       </Routes>
     </Router>
   );

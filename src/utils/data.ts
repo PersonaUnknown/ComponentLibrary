@@ -34,7 +34,7 @@ export const ComponentList: ComponentSection[] = [
             },
             {
                 href: "text-rotate",
-                label: "Word Rotate (WIP)",
+                label: "Word Rotate",
                 description: "Vertically rotate between words as each word slides into frame from top to bottom."
             },
         ]
@@ -77,6 +77,11 @@ export const ComponentList: ComponentSection[] = [
                 label: "Condensed Container (WIP)",
                 description: "Container that condenses equally sized content on top of each other. Hovering expands the list, revealing all content."
             },
+            {
+                href: "accordion",
+                label: "Accordion",
+                description: "Foldable Container that can be opened and closed through clicking on it."
+            },
         ]
     },
     {
@@ -90,7 +95,6 @@ export const ComponentList: ComponentSection[] = [
         ]
     }
 ];
-
 /**
  * Example Manual Transforms for ExplosiveText demo
  */
@@ -131,7 +135,6 @@ export const ManualExplosion: Transform[] = [
         translateY: 7
     },
 ];
-
 /**
  * Component Props (for PropTable component)
  */
@@ -371,7 +374,26 @@ export const TextRotateProps: PropTableRow[] = [
         description: "Animation Duration (ms)"
     },
 ];
-
+export const AccordionProps: PropTableRow[] = [
+    {
+        prop: "header",
+        type: "string",
+        default: "-",
+        description: "Label text for button that toggles accordion content"
+    },
+    {
+        prop: "content",
+        type: "string",
+        default: "-",
+        description: "Accordion content that gets shown or hidden"
+    },
+    {
+        prop: "className",
+        type: "string",
+        default: "-",
+        description: "Optional Styling"
+    },
+];
 /**
  * Basic Component Props
  */
