@@ -3,6 +3,7 @@ import "./App.css";
 import BouncyTextDemo from "./pages/BouncyTextDemo";
 import AccordionDemo from "./pages/container/AccordionDemo";
 import CarouselDemo from "./pages/container/CarouselDemo";
+import DrawerDemo from "./pages/container/DrawerDemo";
 import FileTreeDemo from "./pages/container/FileTreeDemo";
 import ModalDemo from "./pages/container/ModalDemo";
 import ExplosiveTextDemo from "./pages/ExplosiveTextDemo";
@@ -41,6 +42,7 @@ const App = () => {
 				{/* Container */}
 				<Route path="/accordion" element={<AccordionDemo />} />
 				<Route path="/carousel" element={<CarouselDemo />} />
+				<Route path="/drawer" element={<DrawerDemo />} />
 				<Route path="/file-tree" element={<FileTreeDemo />} />
 				<Route path="/modal" element={<ModalDemo />} />
 			</Routes>

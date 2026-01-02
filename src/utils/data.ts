@@ -47,7 +47,7 @@ export const ComponentList: ComponentSection[] = [
 			},
 			{
 				href: "text-tooltip",
-				label: "Tooltip (WIP)",
+				label: "Tooltip",
 				description:
 					"Tooltip information that displays when hovering over text.",
 			},
@@ -112,6 +112,11 @@ export const ComponentList: ComponentSection[] = [
 				href: "modal",
 				label: "Modal",
 				description: "Modal popup that displays over main content of page.",
+			},
+			{
+				href: "drawer",
+				label: "Drawer",
+				description: "Container that slides in and out of view.",
 			},
 		],
 	},
@@ -544,7 +549,6 @@ export const ModalProps: PropTableRow[] = [
 		description: "Whether to close the modal if you click outside of the modal",
 	},
 ];
-
 export const DualSliderProps: PropTableRow[] = [
 	{
 		prop: "min",
@@ -623,6 +627,33 @@ export const DualSliderProps: PropTableRow[] = [
 		type: "(value: number) => string",
 		default: "true",
 		description: "How you want the labels to be formatted ($, %, etc.)",
+	},
+];
+
+export const DrawerProps: PropTableRow[] = [
+	{
+		prop: "side",
+		type: "\"left\" | \"right\" | \"top\" | \"bottom\"",
+		default: "\"left\"",
+		description: "Where to position drawer",
+	},
+	{
+		prop: "buttonContent",
+		type: "ReactNode",
+		default: "-",
+		description: "Component that will show drawer when clicked on",
+	},
+	{
+		prop: "content",
+		type: "ReactNode",
+		default: "-",
+		description: "Component that will be displayed in drawer",
+	},
+	{
+		prop: "staticModal",
+		type: "boolean",
+		default: "false",
+		description: "Whether clicking outside of the drawer will close it",
 	},
 ];
 /**

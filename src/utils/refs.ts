@@ -19,3 +19,8 @@ export interface ModalRef {
 	onShow: () => void;
 	onHide: () => void;
 }
+
+export interface DrawerRef {
+	onShow: () => void;
+	onHide: () => void;
+}
