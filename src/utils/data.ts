@@ -37,6 +37,11 @@ export const ComponentList: ComponentSection[] = [
                 label: "Word Rotate",
                 description: "Vertically rotate between words as each word slides into frame from top to bottom."
             },
+            {
+                href: "text-highlight",
+                label: "Text Highlight",
+                description: "Text that gets highlighted when you hover it."
+            },
         ]
     },
     {
@@ -392,6 +397,32 @@ export const AccordionProps: PropTableRow[] = [
         type: "string",
         default: "-",
         description: "Optional Styling"
+    },
+];
+export const TextHighlightProps: PropTableRow[] = [
+    {
+        prop: "children",
+        type: "string",
+        default: "-",
+        description: "Input text string"
+    },
+    {
+        prop: "highlightColor",
+        type: "string",
+        default: "#ff0000",
+        description: "Highlight color"
+    },
+    {
+        prop: "className",
+        type: "string",
+        default: "-",
+        description: "Optional Styling"
+    },
+    {
+        prop: "duration",
+        type: "number",
+        default: "300",
+        description: "How long it takes to fully highlight text (ms)"
     },
 ];
 /**

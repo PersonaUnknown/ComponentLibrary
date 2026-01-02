@@ -14,6 +14,7 @@ import TypewriterDemo from "./pages/TypewriterDemo";
 import AccordionDemo from "./pages/container/AccordionDemo";
 import InteractiveHoverDemo from "./pages/input/InteractiveHoverDemo";
 import RippleButtonDemo from "./pages/input/RippleButtonDemo";
+import TextHighlightDemo from "./pages/text/TextHighlightDemo";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/text-path" element={<TextAlongPathDemo />} />
         <Route path="/text-bounce" element={<BouncyTextDemo />} />
         <Route path="/text-rotate" element={<TextRotateDemo />} />
+        <Route path="/text-highlight" element={<TextHighlightDemo />} />
         {/* Input */}
         <Route path="/ripple-button" element={<RippleButtonDemo />} />
         <Route path="/interactive-hover-button" element={<InteractiveHoverDemo />} />
