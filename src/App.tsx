@@ -7,6 +7,7 @@ import FileTreeDemo from "./pages/container/FileTreeDemo";
 import ModalDemo from "./pages/container/ModalDemo";
 import ExplosiveTextDemo from "./pages/ExplosiveTextDemo";
 import HomePage from "./pages/HomePage";
+import DualSliderDemo from "./pages/input/DualSliderDemo";
 import InteractiveHoverDemo from "./pages/input/InteractiveHoverDemo";
 import RippleButtonDemo from "./pages/input/RippleButtonDemo";
 import TextAlongPathDemo from "./pages/TextAlongPathDemo";
@@ -32,6 +33,7 @@ const App = () => {
 				<Route path="/text-tooltip" element={<TooltipDemo />} />
 				{/* Input */}
 				<Route path="/ripple-button" element={<RippleButtonDemo />} />
+				<Route path="/dual-slider" element={<DualSliderDemo />} />
 				<Route
 					path="/interactive-hover-button"
 					element={<InteractiveHoverDemo />}

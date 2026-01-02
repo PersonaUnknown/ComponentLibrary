@@ -67,6 +67,12 @@ export const ComponentList: ComponentSection[] = [
 				description:
 					"Button with on-hover effect that results in a dynamic transition / feedback for user.",
 			},
+			{
+				href: "dual-slider",
+				label: "Dual Slider",
+				description:
+					"Slider component where user controls min and max ranges through two knobs.",
+			},
 		],
 	},
 	{
@@ -536,6 +542,87 @@ export const ModalProps: PropTableRow[] = [
 		type: "boolean",
 		default: "false",
 		description: "Whether to close the modal if you click outside of the modal",
+	},
+];
+
+export const DualSliderProps: PropTableRow[] = [
+	{
+		prop: "min",
+		type: "number",
+		default: "-",
+		description: "Minimum value of slider",
+	},
+	{
+		prop: "max",
+		type: "number",
+		default: "-",
+		description: "Maximum value of slider",
+	},
+	{
+		prop: "step",
+		type: "number",
+		default: "1",
+		description: "Step Value in-between slider",
+	},
+	{
+		prop: "defaultLow",
+		type: "number",
+		default: "min",
+		description: "Set default minimum range",
+	},
+	{
+		prop: "defaultHigh",
+		type: "number",
+		default: "max",
+		description: "Set default maximum range",
+	},
+	{
+		prop: "onChange",
+		type: "() => void",
+		default: "-",
+		description: "Updates current low and high values of slider to useState hook",
+	},
+	{
+		prop: "className",
+		type: "string",
+		default: "-",
+		description: "Custom styling for container",
+	},
+	{
+		prop: "trackClassName",
+		type: "string",
+		default: "-",
+		description: "Stylize the slider track",
+	},
+	{
+		prop: "rangeClassName",
+		type: "string",
+		default: "-",
+		description: "Stylize the area between both thumbs, ideal for setting color",
+	},
+	{
+		prop: "thumbClassName",
+		type: "string",
+		default: "-",
+		description: "Stylize circular thumb",
+	},
+	{
+		prop: "labelClassName",
+		type: "string",
+		default: "-",
+		description: "Stylize optional labels",
+	},
+	{
+		prop: "showLabels",
+		type: "boolean",
+		default: "true",
+		description: "Set labels to be visible",
+	},
+	{
+		prop: "formatLabel",
+		type: "(value: number) => string",
+		default: "true",
+		description: "How you want the labels to be formatted ($, %, etc.)",
 	},
 ];
 /**
