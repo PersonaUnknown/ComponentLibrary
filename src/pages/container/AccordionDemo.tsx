@@ -38,20 +38,6 @@ const AccordionDemo = () => {
                                 />
                             }
                         />
-                        {/* {questions.map((question, index) => {
-                            const { header, content } = question;
-                            const length = questions.length - 1;
-                            const borderPlacement = index < length ? "bottom-border" : "";
-                            const key = `question-${index}`;
-                            return (
-                                <Accordion 
-                                    key={key}
-                                    header={header}
-                                    content={content}
-                                    border={borderPlacement}
-                                />
-                            );
-                        })} */}
                     </div>
                 </main>
                 <div className="h-2 md:h-4" />

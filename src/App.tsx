@@ -12,6 +12,7 @@ import TextRandomizerDemo from "./pages/TextRandomizerDemo";
 import TextRotateDemo from "./pages/text/TextRotateDemo";
 import TypewriterDemo from "./pages/TypewriterDemo";
 import AccordionDemo from "./pages/container/AccordionDemo";
+import CarouselDemo from "./pages/container/CarouselDemo";
 import InteractiveHoverDemo from "./pages/input/InteractiveHoverDemo";
 import RippleButtonDemo from "./pages/input/RippleButtonDemo";
 import TextHighlightDemo from "./pages/text/TextHighlightDemo";
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/interactive-hover-button" element={<InteractiveHoverDemo />} />
         {/* Container */}
         <Route path="/accordion" element={<AccordionDemo />} />
+        <Route path="/carousel" element={<CarouselDemo />} />
       </Routes>
     </Router>
   );

@@ -74,7 +74,7 @@ export const ComponentList: ComponentSection[] = [
             },
             {
                 href: "carousel",
-                label: "Carousel (WIP)",
+                label: "Carousel",
                 description: "Container that displays one element at a time. Able to traverse the container using mouse / touch controls or button input."
             },
             {
@@ -454,6 +454,20 @@ export const BasicProps: PropTableRow[] = [
         type: "string",
         default: "-",
         description: "Button Text"
+    },
+    {
+        prop: "className",
+        type: "string",
+        default: "-",
+        description: "Optional Styling"
+    },
+];
+export const BasicContainerProps: PropTableRow[] = [
+    {
+        prop: "children",
+        type: "ReactNode[]",
+        default: "-",
+        description: "Input elements to put inside container"
     },
     {
         prop: "className",

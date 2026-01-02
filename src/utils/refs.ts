@@ -9,3 +9,8 @@ export type TextAlongPathRef = {
     pause: () => void;
     reset: () => void;
 }
+
+export type CarouselRef = {
+    scrollLeft: () => void;
+    scrollRight: () => void;
+}
