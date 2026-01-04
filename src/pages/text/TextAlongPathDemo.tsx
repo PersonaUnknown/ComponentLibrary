@@ -1,9 +1,9 @@
 import { useRef } from "react";
-import BackButton from "../components/buttons/BackButton";
-import PropTable from "../components/tables/PropTable";
-import TextAlongPath from "../components/text/TextAlongPath";
-import { TextPathProps } from "../utils/data";
-import type { TextAlongPathRef } from "../utils/refs";
+import BackButton from "../../components/buttons/BackButton";
+import PropTable from "../../components/tables/PropTable";
+import TextAlongPath from "../../components/text/TextAlongPath";
+import { TextPathProps } from "../../utils/data";
+import type { TextAlongPathRef } from "../../utils/refs";
 
 /**
  * Animating Text Along Non-Linear Path Demo Showcase.

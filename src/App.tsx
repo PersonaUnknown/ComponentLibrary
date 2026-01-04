@@ -1,19 +1,20 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
-import BouncyTextDemo from "./pages/BouncyTextDemo";
 import AccordionDemo from "./pages/container/AccordionDemo";
 import CarouselDemo from "./pages/container/CarouselDemo";
 import DrawerDemo from "./pages/container/DrawerDemo";
 import FileTreeDemo from "./pages/container/FileTreeDemo";
+import MarqueeDemo from "./pages/container/MarqueeDemo";
 import ModalDemo from "./pages/container/ModalDemo";
-import ExplosiveTextDemo from "./pages/ExplosiveTextDemo";
 import HomePage from "./pages/HomePage";
 import DualSliderDemo from "./pages/input/DualSliderDemo";
 import InteractiveHoverDemo from "./pages/input/InteractiveHoverDemo";
 import RippleButtonDemo from "./pages/input/RippleButtonDemo";
-import TextAlongPathDemo from "./pages/TextAlongPathDemo";
-import TextRandomizerDemo from "./pages/TextRandomizerDemo";
-import TypewriterDemo from "./pages/TypewriterDemo";
+import BouncyTextDemo from "./pages/text/BouncyTextDemo";
+import ExplosiveTextDemo from "./pages/text/ExplosiveTextDemo";
+import TextAlongPathDemo from "./pages/text/TextAlongPathDemo";
+import TextRandomizerDemo from "./pages/text/TextRandomizerDemo";
+import TypewriterDemo from "./pages/text/TypewriterDemo";
 import TextHighlightDemo from "./pages/text/TextHighlightDemo";
 import TextRotateDemo from "./pages/text/TextRotateDemo";
 import TooltipDemo from "./pages/text/TooltipDemo";
@@ -45,6 +46,7 @@ const App = () => {
 				<Route path="/drawer" element={<DrawerDemo />} />
 				<Route path="/file-tree" element={<FileTreeDemo />} />
 				<Route path="/modal" element={<ModalDemo />} />
+				<Route path="/marquee" element={<MarqueeDemo />} />
 			</Routes>
 		</Router>
 	);

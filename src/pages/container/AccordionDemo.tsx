@@ -4,6 +4,9 @@ import Accordion from "../../components/containers/Accordion";
 import PropTable from "../../components/tables/PropTable";
 import { AccordionProps } from "../../utils/data";
 
+/**
+ * Showcases the Accordion component
+ */
 const AccordionDemo = () => {
 	return (
 		<div>

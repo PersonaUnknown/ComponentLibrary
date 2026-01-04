@@ -1,7 +1,7 @@
-import BackButton from "../components/buttons/BackButton";
-import PropTable from "../components/tables/PropTable";
-import ExplosiveText from "../components/text/ExplosiveText";
-import { ExplosiveTextProps, ManualExplosion } from "../utils/data";
+import BackButton from "../../components/buttons/BackButton";
+import PropTable from "../../components/tables/PropTable";
+import ExplosiveText from "../../components/text/ExplosiveText";
+import { ExplosiveTextProps, ManualExplosion } from "../../utils/data";
 
 /**
  * Explosive Text Demo Showcase

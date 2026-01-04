@@ -3,6 +3,9 @@ import InteractiveHoverButton from "../../components/buttons/InteractiveHoverBut
 import PropTable from "../../components/tables/PropTable";
 import { ButtonProps } from "../../utils/data";
 
+/**
+ * Showcases the InteractiveHoverButton component
+ */
 const InteractiveHoverDemo = () => {
 	const demoFunction = () => {};
 	return (

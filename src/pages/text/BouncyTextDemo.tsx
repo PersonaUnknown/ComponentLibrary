@@ -1,7 +1,7 @@
-import BackButton from "../components/buttons/BackButton";
-import PropTable from "../components/tables/PropTable";
-import BouncyText from "../components/text/BouncyText";
-import { BouncyTextProps } from "../utils/data";
+import BackButton from "../../components/buttons/BackButton";
+import PropTable from "../../components/tables/PropTable";
+import BouncyText from "../../components/text/BouncyText";
+import { BouncyTextProps } from "../../utils/data";
 
 /**
  * Explosive Text Demo Showcase

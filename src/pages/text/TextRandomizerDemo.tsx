@@ -1,36 +1,48 @@
-import BackButton from "../components/buttons/BackButton";
-import PropTable from "../components/tables/PropTable";
-import ExplosiveText from "../components/text/ExplosiveText";
-import TextRandomizer from "../components/text/TextRandomizer";
-import {
-	ExplosiveTextProps,
-	ManualExplosion,
-	TextRandomizerProps,
-} from "../utils/data";
+import BackButton from "../../components/buttons/BackButton";
+import PropTable from "../../components/tables/PropTable";
+import TextRandomizer from "../../components/text/TextRandomizer";
+import { TextRandomizerProps } from "../../utils/data";
 
 /**
- * Animated Text Demo Showcase:
- * 1. Text Randomizer (Randomize Text on-hover effect)
- * 2. Exploding Text (Have text scatter on-hover)
- * 3. Text
+ * Text Randomizer Demo Showcase
  */
-const TextAnimDemo = () => {
+const TextRandomizerDemo = () => {
 	return (
 		<div>
 			<div className="min-h-screen p-4 md:p-6 manrope">
 				<BackButton />
 				<h1 className="text-center text-2xl sm:text-3xl font-bold">
-					Animated Text
+					Text Randomizer
 				</h1>
 				<h2 className="text-center text-sm sm:text-base">
-					Have characters / text be animated in interesting / eye-catching ways.
+					When hovering over text, randomize its characters for a set duration.
 				</h2>
 				<div className="h-2 md:h-4" />
 				<main className="flex justify-center">
 					<div className="w-full md:w-3xl lg:w-5xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
 						<DemoCard
-							header="Text Randomizer"
+							header="Base Usage"
 							child={<TextRandomizer>HELLO WORLD</TextRandomizer>}
+						/>
+						<DemoCard
+							header="Custom Delay"
+							child={<TextRandomizer delay={60}>HELLO WORLD</TextRandomizer>}
+						/>
+						<DemoCard
+							header="Custom Duration"
+							child={
+								<TextRandomizer iterationOffset={1 / 3}>
+									HELLO WORLD
+								</TextRandomizer>
+							}
+						/>
+						<DemoCard
+							header="Custom Text"
+							child={
+								<TextRandomizer className="text-2xl space-mono font-extrabold">
+									HELLO WORLD
+								</TextRandomizer>
+							}
 						/>
 						{/* Example based on the menu from https://kprverse.com */}
 						<DemoCard
@@ -49,33 +61,11 @@ const TextAnimDemo = () => {
 								</div>
 							}
 						/>
-						<DemoCard
-							header="Explosive Text"
-							child={<ExplosiveText>HELLO WORLD</ExplosiveText>}
-						/>
-						<DemoCard
-							header="Explosive Text (Always Random)"
-							child={<ExplosiveText alwaysRandom>HELLO WORLD</ExplosiveText>}
-						/>
-						<DemoCard
-							header="Explosive Text (Not Random)"
-							child={
-								<ExplosiveText transforms={ManualExplosion}>
-									HIWORLD
-								</ExplosiveText>
-							}
-						/>
 					</div>
 				</main>
 				<div className="h-2 md:h-4" />
-				<h2 className="text-center text-xl font-bold">Text Randomizer Props</h2>
 				<div className="flex justify-center">
 					<PropTable rows={TextRandomizerProps} />
-				</div>
-				<div className="h-2 md:h-4" />
-				<h2 className="text-center text-xl font-bold">Explosive Text Props</h2>
-				<div className="flex justify-center">
-					<PropTable rows={ExplosiveTextProps} />
 				</div>
 			</div>
 		</div>
@@ -97,4 +87,4 @@ const DemoCard = ({ header, child }: Props) => {
 	);
 };
 
-export default TextAnimDemo;
+export default TextRandomizerDemo;

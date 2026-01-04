@@ -1,10 +1,10 @@
 import { useRef } from "react";
 import { IoIosRefresh } from "react-icons/io";
-import BackButton from "../components/buttons/BackButton";
-import PropTable from "../components/tables/PropTable";
-import Typewriter from "../components/text/Typewriter";
-import { TypewriterProps } from "../utils/data";
-import type { TypewriterRef } from "../utils/refs";
+import BackButton from "../../components/buttons/BackButton";
+import PropTable from "../../components/tables/PropTable";
+import Typewriter from "../../components/text/Typewriter";
+import { TypewriterProps } from "../../utils/data";
+import type { TypewriterRef } from "../../utils/refs";
 
 /**
  * Demos the Typewriter component. Examples based on MagicUI's Typing Animation component demo: https://magicui.design/docs/components/typing-animation.

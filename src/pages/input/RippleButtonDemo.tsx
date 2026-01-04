@@ -3,6 +3,9 @@ import RippleButton from "../../components/buttons/RippleButton";
 import PropTable from "../../components/tables/PropTable";
 import { RippleButtonProps } from "../../utils/data";
 
+/**
+ * Showcases the RippleButton component
+ */
 const RippleButtonDemo = () => {
 	const demoFunction = () => {};
 	return (

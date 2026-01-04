@@ -80,7 +80,7 @@ export const ComponentList: ComponentSection[] = [
 		components: [
 			{
 				href: "marquee",
-				label: "Marquee (In Progress)",
+				label: "Marquee",
 				description:
 					"Infinitely scrolling container that displays any form of content (i.e. text, images, videos, etc.).",
 			},
@@ -697,6 +697,58 @@ export const TooltipProps: PropTableRow[] = [
 		default: "200",
 		description: "Delay before displaying and hiding tooltip (ms)",
 	},
+];
+export const MarqueeProps: PropTableRow[] = [
+	{
+		prop: "children",
+		type: "ReactNode[]",
+		default: "-",
+		description: "Content to display in marquee",
+	},
+	{
+		prop: "direction",
+		type: "\"horizontal\" | \"vertical\"",
+		default: "\"horizontal\"",
+		description: "Direction axis to move content along",
+	},
+	{
+		prop: "speed",
+		type: "\"fast\" | \"slow\"",
+		default: "\"fast\"",
+		description: "How fast marquee animates",
+	},
+	{
+		prop: "reverse",
+		type: "boolean",
+		default: "false",
+		description: "Whether to reverse marquee direction in opposite direction",
+	}
+];
+export const HoverMarqueeProps: PropTableRow[] = [
+	{
+		prop: "children",
+		type: "ReactNode[]",
+		default: "-",
+		description: "Content to display in marquee",
+	},
+	{
+		prop: "direction",
+		type: "\"horizontal\" | \"vertical\"",
+		default: "\"horizontal\"",
+		description: "Direction axis to move content along",
+	},
+	{
+		prop: "reverse",
+		type: "boolean",
+		default: "false",
+		description: "Whether to reverse marquee direction in opposite direction",
+	},
+	{
+		prop: "onHoverSpeed",
+		type: "\"slower\" | \"stop\"",
+		default: "\"slower\"",
+		description: "Whether to slow the speed of the marquee or stop it completely when hovering over it",
+	}
 ];
 /**
  * Basic Component Props
